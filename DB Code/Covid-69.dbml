@@ -1,0 +1,56 @@
+Table User
+{
+username varchar [pk]
+password varchar
+email varchar
+is_manager bit
+}
+
+Table POI
+{
+  id varchar [pk]
+  name varchar
+  address varchar
+  lat float
+  lng float
+  rating float4
+  rating_n int
+
+}
+
+Table Types
+{
+  poi varchar [ref: > POI.id]
+  type varchar
+
+  indexes{
+  (poi,type) [pk]
+  }
+}
+
+Table PopularTimes
+{
+  poi varchar [ref: > POI.id]
+  day day
+  time int
+  data int
+
+  indexes{
+    (poi,day,time) [pk]
+  }
+}
+
+Table UserVisits
+{
+  user varchar [ref: > User.username]
+  poi varchar [ref: > POI.id]
+  timestamp datetime [default: 'NOW()']
+
+}
+
+Table Cases
+{
+  user varchar [pk, ref: - User.username]
+  date date
+
+}
