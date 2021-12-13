@@ -1,3 +1,8 @@
+Project Covid_69{
+database_type: 'MySQL'
+note: 'This is a university Project. Covid-69 is a set of tools that track covid-19 cases. It helps its users make informed choices about their commute based on data collected by its community. Furthermore, it notifies people that may have been exposed to the virus'
+}
+
 Table User
 {
 username varchar [pk]
@@ -45,6 +50,7 @@ Table UserVisits
   user varchar [ref: > User.username]
   poi varchar [ref: > POI.id]
   timestamp datetime [default: 'NOW()']
+  report int
 
 }
 

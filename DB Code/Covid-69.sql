@@ -32,7 +32,8 @@ CREATE TABLE `PopularTimes` (
 CREATE TABLE `UserVisits` (
   `user` varchar(255),
   `poi` varchar(255),
-  `timestamp` datetime DEFAULT "NOW()"
+  `timestamp` datetime DEFAULT "NOW()",
+  `report` int
 );
 
 CREATE TABLE `Cases` (
