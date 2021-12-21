@@ -23,7 +23,7 @@ CREATE TABLE `Types` (
 
 CREATE TABLE `PopularTimes` (
   `poi` varchar(255),
-  `day` day,
+  `day` enum('Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'),
   `time` int,
   `data` int,
   PRIMARY KEY (`poi`, `day`, `time`)
@@ -50,4 +50,3 @@ ALTER TABLE `UserVisits` ADD FOREIGN KEY (`user`) REFERENCES `User` (`username`)
 ALTER TABLE `UserVisits` ADD FOREIGN KEY (`poi`) REFERENCES `POI` (`id`);
 
 ALTER TABLE `Cases` ADD FOREIGN KEY (`user`) REFERENCES `User` (`username`);
-
