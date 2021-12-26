@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		
-		<title>CoVID69 | Welcome</title>
+		<title>CoVID69 | Home</title>
 		
 		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"/>
 		<link rel="stylesheet" type="text/css" href="./css/styles.css">
@@ -15,13 +15,13 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 	</head>
 	<body>
-		<div style="filter: blur(5px);" id="homemap"></div>
+		<div id="homemap"></div>
 		<script>
 			let map = L.map('homemap');
 			let tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
 			map.addLayer(tiles)
 			map.setView([38.2462420, 21.7350847], 16);
 		</script>
-		<a href="login.html" style="position: fixed;text-align: center; top: 50%; width:100%;" class="btn btn-success">Connect to CoVID69</a>
+		<div></div>
 	</body>
 </html>
