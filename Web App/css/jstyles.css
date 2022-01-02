@@ -1,5 +1,9 @@
-#homemap {
-  height: 100%;
+#map {
+  height: 100vh;
 }
 
-
+h1 {
+  position: fixed;top: 0px;
+  background-color: #AAD3DF;
+  margin:0px;
+}
