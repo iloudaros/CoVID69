@@ -1,21 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>CoVID69 | Login</title>
+	<title>COVID-69 Login</title>
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-<div class="container h-100">
-	<div class="d-flex justify-content-center h-100">
-		<div class="user_card">
-			<div class="d-flex justify-content-center">
-				<div class="brand_logo_container">
-					<img src=".\img\Sketch001-modified.png" class="brand_logo" alt="COVID-69 logo">
-				</div>
-			</div>
-			<div class="d-flex justify-content-center form_container">
 				<form>
 					<div class="input-group mb-3">
 						<div class="input-group-append">
@@ -44,9 +35,6 @@
 			<div class="mt-4">
 				<div class="d-flex justify-content-center links">
 					Don't have an account? <a href="register.php" class="ml-2">Sign Up</a>
-				</div>
-				<div class="d-flex justify-content-center">
-					<a href="#">Forgot your password?</a>
 				</div>
 			</div>
 		</div>
