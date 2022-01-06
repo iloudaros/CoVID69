@@ -42,7 +42,7 @@ CREATE TABLE `Cases` (
 
 CREATE TABLE `Administrator` (
 	`a_username` varchar(255) PRIMARY KEY,
-  	`a_password` varchar(255)
+  `a_password` varchar(255)
 );
 
 ALTER TABLE `Types` ADD FOREIGN KEY (`poi`) REFERENCES `POI` (`id`);

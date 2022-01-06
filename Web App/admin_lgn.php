@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>COVID-69 Login</title>
+	<title>COVID-69 Administrator Login</title>
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -12,13 +12,13 @@
 						<div class="input-group-append">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input type="text" name="username" id="username" class="form-control input_user" required>
+						<input type="text" name="a_username" id="a_username" class="form-control input_user" required>
 					</div>
 					<div class="input-group mb-2">
 						<div class="input-group-append">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-						<input type="password" name="password" id="password" class="form-control input_pass" required>
+						<input type="password" name="a_password" id="a_password" class="form-control input_pass" required>
 					</div>
 					<div class="form-group">
 						<div class="custom-control custom-checkbox">
@@ -32,12 +32,6 @@
 				<button type="button" name="button" id="login" class="btn login_btn">Login</button>
 			</div>
 			</form>
-			<div class="mt-4">
-				<div class="d-flex justify-content-center links">
-					Don't have an account? <a href="register.php" class="ml-2">Sign Up</a>
-					<a href="admin_lgn.php" class="ml-2">Login As Administrator</a>
-				</div>
-			</div>
 		</div>
 	</div>
 </div>
@@ -53,16 +47,16 @@
 			var valid = this.form.checkValidity();
 
 			if(valid){
-				var username = $('#username').val();
-				var password = $('#password').val();
+				var a_username = $('#a_username').val();
+				var a_password = $('#a_password').val();
 			}
 
 			e.preventDefault();
 
 			$.ajax({
 				type: 'POST',
-				url: 'jslogin.php',
-				data:  {username: username, password: password},
+				url: 'a_jslogin.php',
+				data:  {a_username: a_username, a_password: a_password},
 				success: function(data){
 					alert(data);
 					if($.trim(data) === "1"){
