@@ -1,8 +1,7 @@
 CREATE TABLE `User` (
   `username` varchar(255) PRIMARY KEY,
   `password` varchar(255),
-  `email` varchar(255),
-  `is_manager` bit
+  `email` varchar(255)
 );
 
 CREATE TABLE `POI` (
@@ -39,6 +38,11 @@ CREATE TABLE `UserVisits` (
 CREATE TABLE `Cases` (
   `user` varchar(255) PRIMARY KEY,
   `date` date
+);
+
+CREATE TABLE `Administrator` (
+	`a_username` varchar(255) PRIMARY KEY,
+  	`a_password` varchar(255)
 );
 
 ALTER TABLE `Types` ADD FOREIGN KEY (`poi`) REFERENCES `POI` (`id`);
