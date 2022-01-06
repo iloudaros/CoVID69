@@ -3,15 +3,15 @@ session_start();
 require_once('config.php');
 
 
-$a_username = $_POST['a_username'];
-$a_password = $_POST['a_password'];
+$username = $_POST['a_username'];
+$password = $_POST['a_password'];
 
-$sql = "SELECT * FROM administrator WHERE password = ? LIMIT 1";
+$sql = "SELECT * FROM administrator WHERE a_username = ? AND a_password = ? LIMIT 1";
 $stmtselect  = $db->prepare($sql);
-$result = $stmtselect->execute([$a_username, $a_password]);
+$result = $stmtselect->execute([$username, $password]);
 
 if($result){
-	$user = $stmtselect->fetch(PDO::FETCH_ASSOC);
+	$administrator = $stmtselect->fetch(PDO::FETCH_ASSOC);
 	if($stmtselect->rowCount() > 0){
 		$_SESSION['adminlogin'] = $administrator;
 		echo '1';
