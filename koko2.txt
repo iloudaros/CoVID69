@@ -9,3 +9,5 @@
 μπλα μπλα μπλα
 
 Sygxarht;hria
+
+print();
