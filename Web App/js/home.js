@@ -5,4 +5,4 @@ let map = L.map('map',{
 let tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
 map.addLayer(tiles)
 map.locate({setView: true, maxZoom: 13});
-lc = L.control.locate({initialZoomLevel:14}).addTo(map);
+lc = L.control.locate({initialZoomLevel:14, flyTo:true}).addTo(map);
