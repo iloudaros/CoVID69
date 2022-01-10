@@ -27,7 +27,7 @@ Table POI
   lng float
   rating float4 [default: 0]
   rating_n int [default: 0]
-note:'This information is collected using this library: https://github.com/m-wrzr/populartimes'
+note:'This information is collected using this library: https://github.com/m-wrzr/populartimes '
 
 }
 
@@ -46,7 +46,7 @@ Table Types
 Table PopularTimes
 {
   poi varchar [ref: > POI.id]
-  day day
+  day day [note: "enum with the days of the week"]
   time int
   data int [default: 0]
 
@@ -70,4 +70,14 @@ Table Cases
   user varchar [pk, ref: - User.username]
   date date
 note: 'Here we store the user reported cases of CoVID19'
+}
+
+enum day{
+  Monday
+  Tuesday
+  Wednesday
+  Thursday
+  Friday
+  Suturday
+  Sunday
 }

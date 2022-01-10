@@ -23,7 +23,7 @@ CREATE TABLE `Types` (
 
 CREATE TABLE `PopularTimes` (
   `poi` varchar(255),
-  `day` day,
+  `day` ENUM ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Suturday', 'Sunday') COMMENT 'enum with the days of the week',
   `time` int,
   `data` int DEFAULT 0,
   PRIMARY KEY (`poi`, `day`, `time`)
@@ -51,3 +51,15 @@ ALTER TABLE `UserVisits` ADD FOREIGN KEY (`poi`) REFERENCES `POI` (`id`);
 
 ALTER TABLE `Cases` ADD FOREIGN KEY (`user`) REFERENCES `User` (`username`);
 
+
+ALTER TABLE `User` COMMENT = "The table where user information and their role is stored";
+
+ALTER TABLE `POI` COMMENT = "This information is collected using this library: https://github.com/m-wrzr/populartimes ";
+
+ALTER TABLE `Types` COMMENT = "We use this table to store the types of each Point of Interest";
+
+ALTER TABLE `PopularTimes` COMMENT = "The data for the popular times as given by the Google API";
+
+ALTER TABLE `UserVisits` COMMENT = "Here we store the reported visits of the user, as well as the reported number of people present";
+
+ALTER TABLE `Cases` COMMENT = "Here we store the user reported cases of CoVID19";
