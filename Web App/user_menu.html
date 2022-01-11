@@ -1,0 +1,77 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/c16c85aac4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/user_menu.css">
+    <script src="js/my.js"></script>
+<script src="https://kit.fontawesome.com/c16c85aac4.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" style="margin-left: 20px; font-size: 28px;"  href="user_menu.html"><i class="fas fa-shield-virus"></i>&nbsp;<b>Cov-19 Locator</b></a>
+        
+        <!-- Links -->
+        <ul class="navbar-nav ml-auto" style="margin-right: 50px;">
+
+        <li class="nav-item" style="width: 220px;">
+            <a class="nav-link" href="">Καταχώρηση Επίσκεψης</a>
+        </li>
+
+        <li class="nav-item" style="width: 200px;">
+            <a class="nav-link" href="">Δήλωση Κρούσματος</a>
+        </li>
+
+        <li class="nav-item" style="width: 160px;">
+            <a class="nav-link" href="">Πιθανή Επαφή</a>
+        </li>
+
+        <li class="nav-item dropdown" >
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                <i class="fa fa-user-circle-o" style="font-size:18px"></i> &nbsp; <span id="username1" name="username1"><script>getusername();</script></span>
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="user_edit_profile.html">Επεξεργασία</a>
+              <a class="dropdown-item" href="index.html" id="logout">Log-out</a>
+            </div>
+          </li>
+
+        </ul>
+        </nav>
+        
+        <div class="bg-image"></div>
+
+        <div class="container-fluid content">
+           
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAB8KW_GVOZ6bPaW43n2KB-IdIBSk6JpaY&callback=initMap&v=weekly" async></script>
+                <script>
+                var map;
+        
+                function initMap() {
+                map = new google.maps.Map(document.getElementById("map"), {
+                    center: { lat: 38.24638987206806, lng: 21.735061921268652 },
+                    zoom: 16,
+                });
+                }
+                </script>
+        
+        
+                <div style="width:100%; height:350px" id="map"></div>
+            
+                
+        </div>
+        
+        
+</body>
+
+</html>
+
+  
