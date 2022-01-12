@@ -1,6 +1,6 @@
 <?php
 require_once("config.php");
-$conn=mysqli_connect($db,$db_user,$db_pass,$db_name);
+$conn=mysqli_connect($db_host,$db_user,$db_pass,$db_name);
 
 
 // reading json file
