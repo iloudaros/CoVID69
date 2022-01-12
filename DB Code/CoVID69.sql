@@ -39,7 +39,8 @@ CREATE TABLE `UserVisits` (
 CREATE TABLE `Cases` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `user` varchar(255),
-  `date` date
+  `date` date,
+  `date_added` date DEFAULT NOW()
 );
 
 ALTER TABLE `Types` ADD FOREIGN KEY (`poi`) REFERENCES `POI` (`id`);

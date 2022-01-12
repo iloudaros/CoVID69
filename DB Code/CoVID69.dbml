@@ -68,9 +68,9 @@ note: 'Here we store the reported visits of the user, as well as the reported nu
 Table Cases
 {
   id int [pk, increment]
-  user varchar [ref: - User.username]
+  user varchar [ref: > User.username]
   date date
-  date_added date
+  date_added date [default: `NOW()`]
 note: 'Here we store the user reported cases of CoVID19'
 }
 
