@@ -37,7 +37,8 @@ CREATE TABLE `UserVisits` (
 );
 
 CREATE TABLE `Cases` (
-  `user` varchar(255) PRIMARY KEY,
+  `id` int PRIMARY KEY AUTO_INCREMENT,
+  `user` varchar(255),
   `date` date
 );
 
